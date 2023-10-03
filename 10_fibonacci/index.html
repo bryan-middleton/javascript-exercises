@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-        const fibonacci = function(num) {
+      const fibonacci = function (num) {
         let sequence = [1];
         let fib = 0;
-        for(let i=0;i<num-1;i++){
-            if(sequence.length<2){
-                console.log(sequence[i]);
-               fib = sequence[i]
-               sequence.push(fib);
-               console.log(`first fib: ${fib}`);
-            }
-            else{
-            console.log(sequence[i-1] + '|'+sequence[i]);
-            fib = sequence[i-1] + sequence[i];
+        for (let i = 0; i < num - 1; i++) {
+          if (sequence.length < 2) {
+            console.log(sequence[i]);
+            fib = sequence[i];
+            sequence.push(fib);
+            console.log(`first fib: ${fib}`);
+          } else {
+            console.log(sequence[i - 1] + "|" + sequence[i]);
+            fib = sequence[i - 1] + sequence[i];
             console.log(`push: ${fib}`);
             sequence.push(fib);
-            }
+          }
         }
         console.table(sequence);
         return sequence[num];
-    };
-    console.log(fibonacci(6));
+      };
+      console.log(fibonacci(6));
     </script>
-</body>
+  </body>
 </html>
